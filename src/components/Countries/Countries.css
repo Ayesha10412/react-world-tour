@@ -10,3 +10,7 @@ gap:10px;
 .not-visited{
     background-color: cornsilk;
 }
+.flag-container img{
+    width:100px;
+
+}

@@ -1,4 +1,5 @@
-import './Countries.css'
+import './Countries.css';
+
 import React, { useEffect, useState } from 'react';
 import Country from '../Country';
 const Countries = () => {
@@ -12,11 +13,20 @@ const Countries = () => {
     } ,[])
 
     const [visitedCountries, setVisitedCountries] = useState([])
+    const [visitedFlags, setVisitedFlags]= useState([])
 
     const handleVisitedCountries = country =>{
-        console.log('add this to your visited country')
+        // console.log('add this to your visited country')
 const newVisitedCountries = [...visitedCountries, country]
 setVisitedCountries(newVisitedCountries)
+    }
+
+    const handleVisitedFlags = flag =>{
+        console.log('visit flag')
+        const newVisitedFlags = [...visitedFlags, flag]
+        setVisitedFlags(newVisitedFlags)
+
+
     }
 
 
@@ -30,6 +40,16 @@ setVisitedCountries(newVisitedCountries)
 visitedCountries.map(country => <li key={country.cca3}>{country.name.common}</li>)
 }                </ul>
             </div>
+
+            <div className='flag-container'>
+           
+{
+visitedFlags.map(flag =>
+    <img src={flag} alt="" />
+)}
+
+            </div>
+
           <div className='countries'>
           {
                 countries.map(country=> <Country 
@@ -37,6 +57,7 @@ visitedCountries.map(country => <li key={country.cca3}>{country.name.common}</li
                country={country}
                   //  triggered here this function
 handleVisitedCountries = {handleVisitedCountries} 
+handleVisitedFlags= {handleVisitedFlags}
 ></Country>)
             }
           </div>
