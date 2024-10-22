@@ -1,0 +1,13 @@
+.country{
+    border: 2px solid purple;
+    margin: 10px;
+    padding: 10px;
+border-radius: 10px;
+}
+.flag{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+   padding: 10px;
+   
+}
