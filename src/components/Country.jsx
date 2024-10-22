@@ -11,8 +11,8 @@ const handleVisited =() =>{
     // setVisited(true)
 }
     return (
-        <div className='country'>
-            <h3>Name: {name.common}</h3>
+        <div className={`'country' ${visited ? 'visited' : 'not-visited' } `}>
+            <h3 style={{color: visited? 'purple' : 'black'}}>Name: {name.common}</h3>
             <div className='flag'>
                 <img src={flags.png} alt="" />
             </div>

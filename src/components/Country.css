@@ -5,13 +5,10 @@
 border-radius: 10px;
 }
 .flag{
-    display: flex;
+    /* display: flex;
     justify-items: center;
-    align-items: center;
-   padding: 10px;
+    align-items: center; */
+padding:15px;
+margin:10px;
 
-
-}
-.img{
-    height:100px;
 }
