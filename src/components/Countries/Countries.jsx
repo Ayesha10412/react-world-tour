@@ -29,6 +29,9 @@ setVisitedCountries(newVisitedCountries)
 
     }
 
+    /*remove item from an array in a state
+    ---> use filter to select all the elements except the one you want to remove
+    */
 
     return (
         <div >
@@ -44,8 +47,8 @@ visitedCountries.map(country => <li key={country.cca3}>{country.name.common}</li
             <div className='flag-container'>
            
 {
-visitedFlags.map(flag =>
-    <img src={flag} alt="" />
+visitedFlags.map((flag, idx) =>
+    <img key={idx} src={flag} alt="" />
 )}
 
             </div>

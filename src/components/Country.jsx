@@ -1,5 +1,5 @@
 
-
+import CountryDetail from './CountryDetail/CountryDetail';
 import './Country.css';
 import { useState } from 'react';
 // destruct here the handle function
@@ -29,6 +29,13 @@ const passWithParamFlag = () =>{handleVisitedFlags(country.flags.png)}
 <button onClick={handleVisited}>{visited? 'Visited' : 'Going'}</button>
 {visited ? ' I have visited this country' : ' I want to visit this country'}
 
+<hr />
+<CountryDetail
+    country={country}
+    handleVisitedCountries={handleVisitedCountries}
+    handleVisitedFlags={handleVisitedFlags}
+    >
+</CountryDetail>
 
         </div>
     );
